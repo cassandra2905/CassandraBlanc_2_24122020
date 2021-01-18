@@ -1,3 +1,73 @@
-.debut {
-    
+body { /*Corps de texte*/
+    margin: 0; /*pas de marges extérieures*/
+    font-family: 'Raleway'; /*police d'écriture google font*/
+    min-height: 100vh; /*hauteur minimum de 100vh pour ne pas que le header et le footer soient collés*/
+
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    flex-direction: column; /*définition de l'axe principal ici vertical en colonne*/
+    justify-content: space-between; /*les éléments sont séparés avec de l'espace entre eux*/
+}
+
+header { /*En-tête*/
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    justify-content: space-between; /*les éléments sont séparés avec de l'espace entre eux*/
+    padding: 0 2rem; /*marges intérieures gauches et droites de 2rem*/
+}
+
+#menu { /* Navigation inscription hébergements activité */
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+}
+
+a { /*Liens*/
+    text-decoration: none; /*texte des liens écrits normalement sans soulignage*/
+    color: black;
+}
+
+#menu a { /*Tous les liens dans le menu du header*/
+    font-weight: 500; /*largeur de la police d'écriture fine de tous les a dans le menu du header*/
+}
+
+#menu a > div { /* On sélectionne les div qui sont enfants direct de menu */
+    padding: 3rem 2rem; /*marges intérieures des a du bloc menu de 3rem de hauteur et de 2rem d'espace entre chaque a */
+    border-top: 2px solid transparent; /*bordure continue trasparente de 2px pour éviter au menu en haut de bouger lors du survol*/
+}
+
+#menu a > div:hover { /*tous les a de l'id menu ont une mise en évidence des liens au survol*/
+    border-top: 2px solid #0065fc; /*les a du menu ont une bordure en haut continue de 2px et bleue selon la notation héxadécimale*/
+}
+
+#logo { /*Disposition logo*/
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    justify-content: center; /*le logo est centré sur l'axe principal*/
+    align-items: center; /*le logo est centré sur l'axe secondaire*/
+}
+
+.register { /*Lien "S'inscrire"*/
+    font-weight: bold; /*S'inscrire est en gras*/
+    color:  #0065fc; /*écrit en bleu selon la notation hexadécimale*/
+}
+
+footer { /*Pied de page contenant les rubriques à propos, hébergements et assistance situés chacunes dans les block-footer*/
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    justify-content: space-between; /*les éléments sont séparés avec de l'espace entre eux*/
+    padding-right: 20rem; /*marge intérieure droite de 20rem au niveau du contenu du pied de page */
+    background-color: #f2f2f2; /*fond grisé au niveau du pied de page*/
+    padding-left: 2rem; /*marge intérieure gauche de 2rem*/
+    padding-top: 2rem; /*marge intérieure en haut du pied de page de 2rem*/
+    padding-bottom: 2rem; /*marge intérieure en bas du pied de page de 2rem*/
+}
+
+.block-footer a { /*Les a de la classe block-footer*/
+    padding-bottom: 1rem; /*les a du block-footer sont separés les uns des autres d'une marge intérieure en bas de 1rem (interligne)*/
+    font-weight: 500; /*largeur de la police fine selon le formalisme de la google font Raleway*/
+}
+
+footer h2 { /*Tous les titres de niveau 2 du footer (à propos, hébergements, assistance)*/
+    font-size: 1rem; /*taille de la police de 1rem*/
+    margin-bottom: 2rem; /*séparation de chaque titres des a de 2rem par des marges interieures en bas*/
+}
+
+.block-footer { /*blocs du pied de page contenant les rubriques à propos, hébergements, assistance*/
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    flex-direction: column;  /*définition de l'axe principal ici vertical en colonne*/
 }
