@@ -1,0 +1,67 @@
+body { /*tout le code s'affichant à l'écran*/
+    margin: 0; /*pas de marges extérieures*/
+    font-family: 'Raleway'; /*police d'écriture principale en google font*/
+
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    flex-direction: column; /*les éléments sont organisés sur une colonne*/
+    justify-content: space-between; /*les éléments sont centrés dans l'axe principal*/
+}
+
+.container-hotels { /*bloc principal qui contient le titre principal du bloc ainsi que tout les noms, images et notes des hôtels*/
+    background-color:#f2f2f2; /*fond grisé du bloc contenant les images des hôtels selon la notation en hexadécial*/
+    border-radius: 1rem; /*bordures arrondies des 4 côtés du bloc contenant les hôtels*/
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    flex-direction: column; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    padding: 1rem; /*marge intérieure du bloc de 1rem*/
+}
+
+.list-hotels { /*bloc contenant toutes les images, le nom et la note des hôtels*/
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    flex-wrap: wrap; /*autoriser les éléments du bloc à revenir à la ligne s'ils n'ont plus d'espace*/
+}
+
+.hotel { /*bloc contenant les images, les noms et la notation des hôtels*/
+    background-color: white; /*fond blanc du bloc .hotel*/
+    border-radius: 1rem; /*bordures arrondies des 4 côtés du bloc*/
+    width: 20rem; /*largeur des blocs de 20rem*/
+    height: 15rem; /*hauteur des blocs de 15rem*/
+    margin: 1rem; /*marge extérieure des blocs de 1rem*/
+    border: 5px solid white; /*bordure continue blanche autour des blocs de 5 pixels*/
+    box-shadow: 0 0 10px #bbb; /*ombre grisée autour des blocs*/
+}
+
+.hotel img { /*images des différents hotels*/
+    border-radius: 1rem 1rem 0 0; /*bordures arrondies en haut à gauche et à droite de 1rem*/
+    width: 100%; /*largeur des images de 100% par rapport au bloc*/
+    height: 10rem; /*hauteur des images de 10rem*/
+    object-fit: cover; /*définit la façon dont l'image doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur*/
+}
+
+.hotel-name { /*bloc où sont contenus les noms des hôtels et leur notes*/
+    padding: 0 1rem 0 0; /*marge intérieure droite de 1rem*/
+}
+
+.hotel-notes { /*bloc où sont contenues les étoiles des notes des hôtels*/
+    display:flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    margin-top: 0.4rem; /*marge extérieure en haut de 0.4rem*/
+    color: #0065fc; /*couleur des étoiles en bleu selon la notation hexadécimale*/
+}
+
+.hotel-name h2 { /*tous les titres de niveau 2 dans le bloc des noms d'hôtel*/
+    font-size: 1rem; /*taille de la police d'écriture de 1rem*/
+    margin: 0.2rem; /*marge extérieure de 0.2rem*/
+}
+
+span { /*les prix entourés de cette balise dans le html*/
+    font-weight: bold; /*la police d'écriture est en gras*/
+}
+
+a { /*texte en dessous du nom des hôtels*/
+    font-weight: 300; /*police d'écriture fine selon google font*/
+    font-size: 0.9rem; /*taille de police d'écriture de 0.9rem*/
+    
+}
+
+.gray-stars { /*étoiles grisées dans le bloc .hôtel-notes*/
+   /*color:#f2f2f2; /*couleur grise des étoiles selon la notation hexadécimale*/
+}
