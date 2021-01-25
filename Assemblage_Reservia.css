@@ -1,0 +1,485 @@
+body { /*Corps de texte*/
+    margin: 0; /*pas de marges extérieures*/
+    font-family: 'Raleway'; /*police d'écriture google font*/
+    min-height: 100vh; /*hauteur minimum de 100vh pour ne pas que le header et le footer soient collés*/
+
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    flex-direction: column; /*définition de l'axe principal ici vertical en colonne*/
+    justify-content: space-between; /*les éléments sont séparés avec de l'espace entre eux*/
+}
+
+a { /*Liens*/
+    text-decoration: none; /*texte des liens écrits normalement sans soulignage*/
+    color: black;
+}
+
+span { /*les prix entourés de cette balise dans le html*/
+    font-weight: bold; /*la police d'écriture est en gras*/
+}
+
+header { /*En-tête*/
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    justify-content: space-between; /*les éléments sont séparés avec de l'espace entre eux*/
+    padding: 0 2rem; /*marges intérieures gauches et droites de 2rem*/
+}
+
+#content {
+    margin: 0 2rem;
+}
+
+#menu { /* Navigation inscription hébergements activité */
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+}
+
+#menu a { /* On sélectionne les div qui sont enfants direct de menu */
+    font-weight: 500; /*largeur de la police d'écriture fine de tous les a dans le menu du header*/
+    padding: 3rem 2rem; /*marges intérieures des a du bloc menu de 3rem de hauteur et de 2rem d'espace entre chaque a */
+    border-top: 2px solid transparent; /*bordure continue trasparente de 2px pour éviter au menu en haut de bouger lors du survol*/
+}
+
+#menu a:hover { /*tous les a de l'id menu ont une mise en évidence des liens au survol*/
+    border-top: 2px solid #0065fc; /*les a du menu ont une bordure en haut continue de 2px et bleue selon la notation héxadécimale*/
+}
+
+#menu .suscribe {
+    font-weight: bold;
+    color:#0065fc;
+
+}
+
+#logo { /*Disposition logo*/
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    justify-content: center; /*le logo est centré sur l'axe principal*/
+    align-items: center; /*le logo est centré sur l'axe secondaire*/
+}
+
+.register { /*Lien "S'inscrire"*/
+    font-weight: bold; /*S'inscrire est en gras*/
+    color:  #0065fc; /*écrit en bleu selon la notation hexadécimale*/
+}
+
+.no-bold {
+    font-weight: normal;
+}
+
+#introduce h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+#introduce div {
+    font-weight: 400;
+}
+
+.container-search { /*bloc parent du bouton recherche*/
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    width: 20rem; /*le bloc parent à une largeur de 20rem*/
+    height: 3rem; /*le bloc parent à une hauteur de 3rem*/
+    padding: 1rem; /*et des marges interieures sur tous les côtés de 1rem*/
+}
+
+#search-icon {
+    display: none;
+}
+
+#map { /*zone où se trouve le logo map*/
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    justify-content: center; /*la zone de l'id map est centrée dans l'axe principal*/
+    align-items: center; /*la zone de l'id map est centrée dans l'axe secondaire (interligne)*/
+    background-color: #f2f2f2; /*le fond de couleur est gris selon la notation hexadécimale voulue pour la mission*/
+    border-radius: 1rem 0 0 1rem; /*bordures arrondies de 1 rem en haut à gauche et en bas à gauche*/
+    min-width: 3rem; /*largeur minimum de 3rem de la zone de l'id map*/
+}
+
+#map .fa-map-marker-alt { /*icône map*/
+    font-size: 1rem; /*taille de l'icône 1rem*/
+}
+
+#site-search { /*input de type zone de recherche*/
+    flex: 1; /*la zone de recherche occupe tout l'espace restant*/
+    border: solid 1px #f2f2f2; /*la zone de recherche à une bordure continue de 1px et de couleur gris clair selon la notation hexadécimale*/
+    font-size: 1rem; /*la police d'écriture est de 1rem (1caractère)*/
+    font-family: "Raleway"; /*la police d''écriture est une google font nommée Raleway*/
+    font-weight: bold; /*la police d'écriture est en gras*/
+    padding: 0 1rem; /*marge intérieure de 0 en haut et en bas et de 1rem à gauche et à droite*/
+}
+
+.button { /*bouton "Rechercher"*/ 
+    background-color: #0065fc; /*fond coloré pour le bouton "Rechercher" selon la notation hexadécimale*/
+    padding: 0.5rem; /*marges intérieures de côté de 0.5rem*/
+    border-radius: 0 1rem 1rem 0; /*bordures arrondies à droite en haut et en bas*/
+    border:  #0065fc solid; /*bordure continue de couleur bleue selon la notation hexadécimale*/
+    font-family: "Raleway"; /*police d'écriture google fonts du bouton rechercher*/
+    font-weight: bold; /*police d'écriture en gras*/
+    color: white; /*"Rechercher" écrit en blanc*/
+    font-size: 1rem; /*taille de la police d'écriture de 1rem*/
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    justify-content: center; /*la zone du texte "Rechercher" est centrée dans l'axe principal*/
+    align-items: center; /*la zone du texte "Rechercher" est centrée dans l'axe secondaire (interligne)*/
+}
+.filter-container { /*bloc "parent" ou sont contenus les filtres*/
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    padding: 1rem; /*marge interieure sur les 4 cotés de 1rem (1 caractère)*/
+    align-items: center; /*Les éléments sont regroupés au centre de l'axe secondaire (interligne)*/
+    flex-wrap: wrap;
+}
+
+.filter-container > h2 { /*le "titre" "Filtres" de niveau 2 contenu dans le bloc "parent"*/
+    font-family: "Raleway"; /*police d'écriture*/
+    font-size: 1rem; /*taille de la police de 1 carctère*/
+    margin-right: 2rem; /*le titre h2 Filtres est eloigné d'une marge vers la droite de 2 rem (2 carctères)*/
+}
+
+.filter-icons { /*bloc où sont contenues les icônes des filtres*/
+    display:flex; /*définit un conteneur où les blocs enfants sont côte à côte horizontalement par défaut*/
+    width: 15rem; /*largeur des icônes de 100% par rapport à l'axe horizontal*/
+    height: 100%; /*hauteur des icônes de 100% par rapport à l'axe vertical*/
+    border-radius: 50rem; /*bordures arrondies de 50rem de chaques cotés afin de former un cercle*/
+    justify-content: space-between; /*les éléments sont séparés avec de l'espace entre eux dans l'axe principal*/
+    flex-direction: row; /*direction du conteneur horizontalement par défaut*/
+    margin: 0.5rem 2rem 0.5rem 0;
+    color: #0065fc; /*icônes en bleues selon les couleurs en hexadécimal demandées dans la mission*/
+    border: 2px solid #f2f2f2; /* continues autour du bloc des îcones de filtres en gris d'une taille de 2px*/
+}
+
+.filter-icons i { /*les blocs où sont contenues les icônes de type i*/
+    min-width: 3rem; /*les icones sont de largeur minimum de 3rem*/
+    border-radius: 50rem; /*entourées de cercles*/
+    display: flex; /*définit un conteneur où les blocs enfants sont côte à côte horizontalement par défaut*/
+    justify-content: center; /*les icônes sont centrées dans l'axe principal*/
+    align-items: center; /*les icônes sont regroupées au centre de l'axe secondaire (interligne)*/
+    background-color: #deebff; /*fond coloré en bleu clair selon la notation hexadécimale demandée par la mission*/
+}
+
+.filter-names { /*les blocs où sont contenus les noms des filtres*/
+    display: flex; /*définit un conteneur où les blocs enfants sont côte à côte horizontalement par défaut*/
+    justify-content: center; /*les noms des filtres sont centrés sans l'axe principal*/
+    align-items: center; /*les noms de filtres sont regroupés au centre de l'axe secondaire (interligne)*/
+    width: 100%; /*largeur des noms de filtres de 100% par rapport à l'axe horizontal*/
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.filter-names h2 { /*tous les "titres" de niveau 2 contenus dans le bloc filter-names*/
+    font-family: "Raleway"; /*nom de la police d'écriture google font "Raleway" */
+    font-size: 1rem; /*taille de l'écriture de 1rem (1 caractère)*/
+    color: black; /*couleur de la police d'écriture en noir*/
+    white-space: nowrap; /*empêche retour à la ligne*/
+} 
+.filter-icons:hover { /*les filtres au survol changent d'apparence*/
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+
+#info {
+    display: flex;
+    margin: 1rem 0 2rem 0;
+}
+
+#logo-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid  #f2f2f2;
+    border-radius: 50%;
+    color: #0065fc;
+}
+
+#info .text-info {
+    font-weight: 400;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-hotels { /*bloc principal qui contient le titre principal du bloc ainsi que tout les noms, images et notes des hôtels*/
+    background-color:#f2f2f2; /*fond grisé du bloc contenant les images des hôtels selon la notation en hexadécial*/
+    border-radius: 1rem; /*bordures arrondies des 4 côtés du bloc contenant les hôtels*/
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    flex-direction: column; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    padding: 1rem; /*marge intérieure du bloc de 1rem*/
+    margin: 0 2rem 0 0;
+    flex: 2;
+}
+
+.list-hotels { /*bloc contenant toutes les images, le nom et la note des hôtels*/
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    flex-wrap: wrap; /*autoriser les éléments du bloc à revenir à la ligne s'ils n'ont plus d'espace*/
+}
+
+.hotel { /*bloc contenant les images, les noms et la notation des hôtels*/
+    background-color: white; /*fond blanc du bloc .hotel*/
+    border-radius: 1rem; /*bordures arrondies des 4 côtés du bloc*/
+    width: 14rem; /*largeur des blocs de 14rem*/
+    height: 11rem; /*hauteur des blocs de 11rem*/
+    margin: 1rem; /*marge extérieure des blocs de 1rem*/
+    border: 5px solid white; /*bordure continue blanche autour des blocs de 5 pixels*/
+    box-shadow: 0 0 10px #bbb; /*ombre grisée autour des blocs*/
+}
+
+.hotel img { /*images des différents hotels*/
+    border-radius: 1rem 1rem 0 0; /*bordures arrondies en haut à gauche et à droite de 1rem*/
+    width: 100%; /*largeur des images de 100% par rapport au bloc*/
+    height: 6.5rem; /*hauteur des images de 10rem*/
+    object-fit: cover; /*définit la façon dont l'image doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur*/
+}
+
+.hotel-name { /*bloc où sont contenus les noms des hôtels et leur notes*/
+    padding: 0 1rem 0 0; /*marge intérieure droite de 1rem*/
+}
+
+.hotel-notes { /*bloc où sont contenues les étoiles des notes des hôtels*/
+    display:flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    margin-top: 0.4rem; /*marge extérieure en haut de 0.4rem*/
+    color: #0065fc; /*couleur des étoiles en bleu selon la notation hexadécimale*/
+}
+
+.hotel-name .name { /*tous les titres de niveau 2 dans le bloc des noms d'hôtel*/
+    font-size: 1rem; /*taille de la police d'écriture de 1rem*/
+    margin: 0.2rem; /*marge extérieure de 0.2rem*/
+}
+
+.gray-stars { /*étoiles grisées dans le bloc .hôtel-notes*/
+   color:#f2f2f2; /*couleur grise des étoiles selon la notation hexadécimale*/
+}
+
+.most-popular-asside { /*bloc parent englobant le bloc title-icon*/
+    display: flex; /*définit un conteneur où les blocs sont côte à côte horizontalement par défaut*/
+    flex-direction: column; /*les éléments sont organisés sur une colonne*/
+    background-color:#f2f2f2; /*fond coloré du bloc en gris clair selon la notation hexadécimale*/
+    border-radius: 1rem; /*bordres arrondies de 1rem de chaque cotés du bloc*/
+    flex: 1;
+}
+
+.title-icon { /*bloc en globant le titre et l'icone "les plus populaires"*/
+    display: flex; /*définit un conteneur où les blocs sont côte à côte horizontalement par défaut*/
+    justify-content: space-between; /*les éléments sont étirés sur tout l'axe (il y a de l'espace entre eux)*/
+    align-items: center; /*alignement sur l'axe secondaire au centre*/
+    padding: 0.5rem 2rem; /*marge intérieure de 1rem en haut et en bas et de 2 rem à gauche et à droite*/
+    white-space: nowrap;
+}
+
+.title-icon .logo-asside { /*bloc .title-icon parent de l'élément .logo-asside agit donc sur le logo*/
+    font-size: 2rem; /*le logo fait une taille de 2 rem (2 caractères)*/
+}
+
+.most-popular-list { /*bloc regroupant tous les hôtels les plus populaires, leur images, leur noms ainsi que leur notes*/
+    display: flex; /*définit un conteneur où les blocs sont côte à côte horizontalement par défaut*/
+    flex-direction: column; /*les éléments sont organisés sur une colonne*/   
+}
+
+.most-popular-hotel { /*bloc englobant toutes les informations relatives aux hotels les plus populaires*/
+    display: flex; /*définit un conteneur où les blocs sont côte à côte horizontalement par défaut*/
+    background-color: white; /*fond coloré de chaque blocs de couleur*/
+    border-radius: 1rem; /*bordures arrondies de chaque cotés des blocs de 1rem*/
+    width: 18rem; /*blocs de largeur de 22rem*/
+    height: 7rem; /*blocs de hauteur de 8rem*/
+    margin: 1rem; /*marges de 1rem de tous les côtés du bloc*/
+    border: 5px solid white; /*bordure continue de chaque côtés du bloc de 5px et de couleur blanche*/
+    box-shadow: 0 2px 10px #ddd; /*ombre de 0px à gauche et à droite (x) 2px en haut et en bas (y)*/
+}
+
+.most-popular-hotel img { /*les images des hotels les plus populaires*/
+    border-radius: 1rem 0 0 1rem; /*bordures arrondies à gauche en haut et en bas des images*/
+    width: 40%; /*largeur des images de 40% par rapport à son bloc parent de .most-popular-hotel*/
+    height: 100%; /*hauteur des images de 40% par rapport à son bloc parent de .most-popular-hotel*/
+    object-fit: cover; /*l'image couvre les 40% de largeur du bloc*/
+}
+
+.popular-hotel-name { /*bloc englobant les noms des hôtels et leur notes*/
+    padding: 0 1rem; /*marge intérieure en haut et en bas de 0rem et de 1rem à gauche et à droite*/
+    display: flex; /*définit un conteneur où les blocs sont côte à côte horizontalement par défaut*/
+    flex-direction: column; /*les éléments sont organisés sur une colonne*/
+    justify-content: space-around; /*les éléments sont étirés sur tout l'axe, ils laissent aussi de l'espace sur les extrémités*/
+}
+
+.popular-hotel-name .name { /*tous les h2 du bloc nom des hôtels populaires*/
+    font-size: 1rem; /*taille de la police d'écriture des h2 du bloc .popular-hotel-name est de 1rem*/
+    margin: 0 0 0.5rem 0; /*toutes les marges exyérieures des h2 sont de 0 sauf celle du bas qui est de 0.5rem*/
+}
+
+.most-popular-asside span { /*tous les span dans le bloc principal*/
+    font-weight: bold; /*largeur de la police en gras*/
+}
+
+.popular-hotel-notes { /*étoiles de notation en bleu des hôtels les plus populaires*/
+    display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
+    margin-top: 0.4rem; /*marge extérieure en haut de 0.4rem*/
+    color: #0065fc; /*couleur des étoiles en bleu selon la notation hexadécimale*/
+}
+
+.gray-stars { /*étoiles grisées dans le bloc .hôtel-notes*/
+    color:#f2f2f2; /*couleur grise des étoiles selon la notation hexadécimale*/
+}
+
+.main-contain {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+#activities-in-marseille-container { /*bloc principal activités à Marseille*/
+    display: flex; /*les éléments à l'interieur du conteneur sont agencés horizontalement par défaut*/
+    flex-wrap: wrap; /*autoriser les éléments à revenir à la ligne s'ils n'ont plus d'espace*/
+    margin: 0 0 2rem 0;
+}
+
+.column-activities { /*chaques activités à Marseille séparées en colonnes*/
+    display: flex; /*les éléments à l'interieur du conteneur sont agencés horizontalement par défaut*/
+    flex-direction: column; /*les éléments sont organisés sur colonne*/
+    height: 25rem; /*les blocs de chaques activités prennent 100% de la hauteur du bloc principal*/
+    flex: 1; /*les blocs de chaque activités prennent la place dans le conteneur principal*/
+}
+
+.pictures-block { /*bloc regroupant chaque images ainsi que son intitulé h2*/
+    display: flex; /*les éléments à l'interieur du conteneur sont agencés horizontalement par défaut*/
+    flex-direction: column; /*les éléments sont organisés sur colonne*/
+    height: 100%; /*les images prennent 100% de la hauteur des blocs par défaut*/
+    background-color: white; /*fond de couleur en bas des images de couleur blanche*/
+    margin: 1rem; /*espace entre les pictures block de 1rem*/
+    box-shadow: 0 2px 10px #ddd; /*ombre grisée sur les pictures block*/
+    border-radius: 1rem; /*bordures arrondies des 4 cotés du block*/
+    font-family: "Raleway"; /*police nommée Raleway selon google font*/
+    font-weight: bold; /*largeur de la police en gras*/
+    flex: 1; /*les blocs de chaque images prennent la place dans le conteneur principal*/
+}
+
+.pictures-block > img { /*l'image contenue dans pictures block*/
+    object-fit: cover; /*l'image couvre tout le block*/
+    height: 0; /*hauteur de 0 rem pour ne pas casser la mise en forme du flex*/
+    border-radius: 1rem 1rem 0 0; /*bordures arrondies en haut et à droite de 1rem*/
+    flex: 1; /*les images prennent toute la place du pictures block par défaut*/
+
+}
+.pictures-block .name { /*les h2 contenus dans pictures block*/
+    padding-left: 1rem; /*marge intérieure gauche de 1rem*/
+    white-space: nowrap; /*les h2 ne reviennent pas à la ligne*/
+    font-family: "Raleway"; /*police nommée Raleway selon google font*/
+    font-weight: bold; /*largeur de la police en gras*/
+    font-size: 1rem; /*la taille de police d'écriture des h2 est de 1rem*/
+}
+
+#fort { /*id unique qui sert à ce que l'image du fort occupe un tiers de l'espace en colomne comme indiqué sur la maquette*/
+    flex: 1.3;
+}
+
+footer { /*Pied de page contenant les rubriques à propos, hébergements et assistance situés chacunes dans les block-footer*/
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    background-color: #f2f2f2; /*fond grisé au niveau du pied de page*/
+    padding: 2rem;
+}
+
+.block-footer { /*blocs du pied de page contenant les rubriques à propos, hébergements, assistance*/
+    display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
+    flex-direction: column;  /*définition de l'axe principal ici vertical en colonne*/
+    padding-left: 1rem;
+    flex: 3;
+}
+
+.block-footer .name { /*Tous les titres de niveau 2 du footer (à propos, hébergements, assistance)*/
+    font-size: 1rem; /*taille de la police de 1rem*/
+    margin-bottom: 2rem; /*séparation de chaque titres des a de 2rem par des marges interieures en bas*/
+}
+
+.block-footer a { /*Les a de la classe block-footer*/
+    padding-bottom: 1rem; /*les a du block-footer sont separés les uns des autres d'une marge intérieure en bas de 1rem (interligne)*/
+    font-weight: 500; /*largeur de la police fine selon le formalisme de la google font Raleway*/
+}
+
+.space-footer {
+    flex: 1;
+}
+
+@media all and (max-width: 740px) {
+    header {
+        margin-bottom: 1rem;
+    }
+
+    #logo {
+       align-items: flex-start;
+       margin-top: 1.5rem;
+    }
+
+    #menu {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+
+    #menu a {
+        border-top: none;
+        border-bottom: 2px solid #f2f2f2;
+        padding: 2rem 1rem;
+    }
+
+    #menu a:hover {
+        border-bottom: 2px solid #0065fc !important;
+        border-top: none;
+    }
+
+    .suscribe {
+        border-bottom: 2px solid transparent !important;
+    }
+
+    #search-icon {
+        display: block;
+        border-radius: 1rem;
+        width: 3rem;
+    }
+
+    #search-text {
+        display: none;
+    }
+ 
+    .main-contain {
+        flex-direction: column;
+    }
+
+    #container-hotels{
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .list-hotels {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list-hotels > a {
+        width: 100%;
+    }
+
+    .list-hotels > a, .most-popular-list > a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hotel, .most-popular-hotel {
+        width: 90%;
+        margin: 1rem 0;
+    }
+
+    #activities-in-marseille-container {
+        flex-direction: column;
+    }
+
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .space-footer {
+        flex: 0;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .block-footer {
+        padding: 1rem 0.5rem;
+    }
+}

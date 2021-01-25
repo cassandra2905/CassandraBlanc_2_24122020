@@ -29,7 +29,6 @@
     height: 0; /*hauteur de 0 rem pour ne pas casser la mise en forme du flex*/
     border-radius: 1rem 1rem 0 0; /*bordures arrondies en haut et à droite de 1rem*/
     flex: 1; /*les images prennent toute la place du pictures block par défaut*/
-
 }
 .pictures-block > h2 { /*les h2 contenus dans pictures block*/
     padding-left: 1rem; /*marge intérieure gauche de 1rem*/
