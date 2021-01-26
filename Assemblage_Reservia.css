@@ -23,8 +23,8 @@ header { /*En-tête*/
     padding: 0 2rem; /*marges intérieures gauches et droites de 2rem*/
 }
 
-#content {
-    margin: 0 2rem;
+#content { /*bloc regroupant tous les éléments du titre jusqu'au footer*/
+    margin: 0 2rem; /*marge extérieure de 2rem à gauche et à droite*/
 }
 
 #menu { /* Navigation inscription hébergements activité */
@@ -220,7 +220,7 @@ header { /*En-tête*/
     background-color: white; /*fond blanc du bloc .hotel*/
     border-radius: 1rem; /*bordures arrondies des 4 côtés du bloc*/
     width: 14rem; /*largeur des blocs de 14rem*/
-    height: 11.5rem; /*hauteur des blocs de 11rem*/
+    height: 11.5rem; /*hauteur des blocs de 11.5rem*/
     margin: 1rem; /*marge extérieure des blocs de 1rem*/
     border: 5px solid white; /*bordure continue blanche autour des blocs de 5 pixels*/
     box-shadow: 0 0 10px #bbb; /*ombre grisée autour des blocs*/
@@ -229,7 +229,7 @@ header { /*En-tête*/
 .hotel img { /*images des différents hotels*/
     border-radius: 1rem 1rem 0 0; /*bordures arrondies en haut à gauche et à droite de 1rem*/
     width: 100%; /*largeur des images de 100% par rapport au bloc*/
-    height: 6.5rem; /*hauteur des images de 10rem*/
+    height: 6.5rem; /*hauteur des images de 6.5rem*/
     object-fit: cover; /*définit la façon dont l'image doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur*/
 }
 
@@ -281,19 +281,19 @@ header { /*En-tête*/
 .most-popular-list { /*bloc regroupant tous les hôtels les plus populaires, leur images, leur noms ainsi que leur notes*/
     display: flex; /*définit un conteneur où les blocs sont côte à côte horizontalement par défaut*/
     flex-direction: column; /*les éléments sont organisés sur une colonne*/   
-    align-items: center;
+    align-items: center; /*alignement sur l'axe secondaire au centre*/
     justify-content: center;
 }
 
 .most-popular-hotel { /*bloc englobant toutes les informations relatives aux hotels les plus populaires*/
     display: flex; /*définit un conteneur où les blocs sont côte à côte horizontalement par défaut*/
-    background-color: white; /*fond coloré de chaque blocs de couleur*/
+    background-color: white; 
     border-radius: 1rem; /*bordures arrondies de chaque cotés des blocs de 1rem*/
-    width: 18rem; /*blocs de largeur de 22rem*/
+    width: 18rem; /*blocs de largeur de 18rem*/
     height: 8rem; /*blocs de hauteur de 8rem*/
     margin: 1rem; /*marges de 1rem de tous les côtés du bloc*/
     border: 5px solid white; /*bordure continue de chaque côtés du bloc de 5px et de couleur blanche*/
-    box-shadow: 0 2px 10px #ddd; /*ombre de 0px à gauche et à droite (x) 2px en haut et en bas (y)*/
+    box-shadow: 0 2px 10px #ddd; /*ombre de 10px à gauche et à droite (x) 2px en haut et en bas (y)*/
 }
 
 .most-popular-hotel img { /*les images des hotels les plus populaires*/
@@ -310,13 +310,13 @@ header { /*En-tête*/
     justify-content: space-around; /*les éléments sont étirés sur tout l'axe, ils laissent aussi de l'espace sur les extrémités*/
 }
 
-.popular-hotel-name .name { /*tous les h2 du bloc nom des hôtels populaires*/
-    font-size: 1rem; /*taille de la police d'écriture des h2 du bloc .popular-hotel-name est de 1rem*/
-    margin: 0 0 0.5rem 0; /*toutes les marges exyérieures des h2 sont de 0 sauf celle du bas qui est de 0.5rem*/
+.popular-hotel-name .name { /*tous les noms du bloc nom des hôtels populaires*/
+    font-size: 1rem; /*taille de la police d'écriture des noms du bloc .popular-hotel-name est de 1rem*/
+    margin: 0 0 0.5rem 0; /*toutes les marges exyérieures des noms sont de 0 sauf celle du bas qui est de 0.5rem*/
     font-weight: bold;
 }
 
-.popular-hotel-name .no-bold {
+.popular-hotel-name .no-bold { /*toutes les informations en dessous des noms des hotels contenus les hôtels les plus populaires*/
     white-space: nowrap;
 }
 
@@ -327,14 +327,14 @@ header { /*En-tête*/
 .popular-hotel-notes { /*étoiles de notation en bleu des hôtels les plus populaires*/
     display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
     margin-top: 0.4rem; /*marge extérieure en haut de 0.4rem*/
-    color: #0065fc; /*couleur des étoiles en bleu selon la notation hexadécimale*/
+    color: #0065fc; 
 }
 
 .gray-stars { /*étoiles grisées dans le bloc .hôtel-notes*/
     color:#f2f2f2; /*couleur grise des étoiles selon la notation hexadécimale*/
 }
 
-.main-contain {
+.main-contain { /*conteneur principal contenant les blocs container-hotels et most-popular-asside*/
     display: flex;
     align-items: stretch; 
     flex-wrap: wrap;
@@ -376,10 +376,10 @@ header { /*En-tête*/
 }
 .pictures-block .name { /*les noms des images contenus dans pictures block*/
     padding: 0.5rem 0 0.5rem 1rem; /*marge intérieure en haut de 0.5rem, à droite de 0rem et à gauche de 1rem*/
-    white-space: nowrap; /*les h2 ne reviennent pas à la ligne*/
+    white-space: nowrap; /*les noms ne reviennent pas à la ligne*/
     font-family: "Raleway"; /*police nommée Raleway selon google font*/
     font-weight: bold; /*largeur de la police en gras*/
-    font-size: 1rem; /*la taille de police d'écriture des h2 est de 1rem*/
+    font-size: 1rem; /*la taille de police d'écriture des noms est de 1rem*/
 }
 
 #fort { /*id unique qui sert à ce que l'image du fort occupe un tiers de l'espace en colomne comme indiqué sur la maquette*/
