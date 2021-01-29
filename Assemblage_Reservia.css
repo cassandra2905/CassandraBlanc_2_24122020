@@ -39,6 +39,7 @@ header { /*En-tête*/
 
 #menu a:hover { /*tous les a de l'id menu ont une mise en évidence des liens au survol*/
     border-top: 2px solid #0065fc; /*les a du menu ont une bordure en haut continue de 2px et bleue selon la notation héxadécimale*/
+    color: #0065fc;
 }
 
 #menu .suscribe {
@@ -51,6 +52,10 @@ header { /*En-tête*/
     display: flex; /*sur le conteneur, les éléments à l'intérieur sont agencés horizontalement(par défaut)*/
     justify-content: center; /*le logo est centré sur l'axe principal*/
     align-items: center; /*le logo est centré sur l'axe secondaire*/
+}
+
+#logo img {
+    width: 6rem; /*largeur des images de 100% par rapport au bloc*/
 }
 
 .register { /*Lien "S'inscrire"*/
@@ -283,6 +288,7 @@ header { /*En-tête*/
     flex-direction: column; /*les éléments sont organisés sur une colonne*/   
     align-items: center; /*alignement sur l'axe secondaire au centre*/
     justify-content: center;
+    align-items: stretch; 
 }
 
 .most-popular-hotel { /*bloc englobant toutes les informations relatives aux hotels les plus populaires*/
@@ -350,8 +356,8 @@ header { /*En-tête*/
 .column-activities { /*chaques activités à Marseille séparées en colonnes*/
     display: flex; /*les éléments à l'interieur du conteneur sont agencés horizontalement par défaut*/
     flex-direction: column; /*les éléments sont organisés sur colonne*/
-    height: 25rem; /*les blocs de chaques activités prennent 25rem de la hauteur du bloc principal*/
     flex: 1; /*les blocs de chaque activités prennent la place dans le conteneur principal*/
+    max-height: 65vh;
 }
 
 .pictures-block { /*bloc regroupant chaque images ainsi que son intitulé de classe "name"*/
@@ -364,7 +370,9 @@ header { /*En-tête*/
     border-radius: 1rem; /*bordures arrondies des 4 cotés du block*/
     font-family: "Raleway"; /*police nommée Raleway selon google font*/
     font-weight: bold; /*largeur de la police en gras*/
-    flex: 1; /*les blocs de chaque images prennent la place dans le conteneur principal*/
+    flex: 1; /*les blocs de chaque images prennent la place dans le conteneur principal*/;
+    align-items: stretch; 
+    height: 25vh;  
 }
 
 .pictures-block > img { /*l'image contenue dans pictures block*/
