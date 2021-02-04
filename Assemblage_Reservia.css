@@ -42,8 +42,8 @@ header { /*En-tête*/
     color: #0065fc;
 }
 
-#menu .suscribe {
-    font-weight: bold;
+#suscribe { 
+    font-weight: bold !important;
     color:#0065fc;
 }
 
@@ -424,26 +424,28 @@ footer { /*Pied de page contenant les rubriques à propos, hébergements et assi
 @media all and (max-width: 800px) {
     header {
         margin-bottom: 1rem;
+        padding: 0;
     }
 
     #logo {
-       align-items: flex-start;
-       margin-top: 1.5rem;
-    }
-
-    #logo img {
-        width: 4rem;
+       position: absolute;
+       top: 20px;
+       left: 20px;
     }
 
     #menu {
-        flex-wrap: wrap-reverse;
-        justify-content: center;
+        box-sizing: border-box;
+        order: 3;
+        width: 100%;
+        text-align: center;
+        margin-top: 5rem;
     }
 
     #menu a {
         border-top: none;
         border-bottom: 2px solid #f2f2f2;
-        padding: 2rem 1rem;
+        padding: 1rem 0;
+        width: 50%;
     }
 
     #menu a:hover {
@@ -452,8 +454,23 @@ footer { /*Pied de page contenant les rubriques à propos, hébergements et assi
         color: #0065fc;
     }
 
-    .suscribe {
-        border-bottom: 2px solid transparent !important;
+    #menu a#suscribe {
+        border-top: none;
+        border-bottom: none;
+        padding: 0;
+        width: max-content;
+    }
+
+    #menu a#suscribe:hover {
+        border-bottom: none !important;
+        border-top: none;
+        color: #0065fc;
+    }
+
+    #suscribe {
+        position: absolute;
+        top: 35px;
+        right: 20px;
     }
 
     #search-icon {
