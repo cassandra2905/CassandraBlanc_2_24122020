@@ -45,7 +45,6 @@ header { /*En-tête*/
 #menu .suscribe {
     font-weight: bold;
     color:#0065fc;
-
 }
 
 #logo { /*Disposition logo*/
@@ -280,7 +279,7 @@ header { /*En-tête*/
 }
 
 .title-icon .logo-asside { /*bloc .title-icon parent de l'élément .logo-asside agit donc sur le logo*/
-    font-size: 2rem; /*le logo fait une taille de 2 rem (2 caractères)*/
+    font-size: 1.5rem; /*le logo fait une taille de 2 rem (2 caractères)*/
 }
 
 .most-popular-list { /*bloc regroupant tous les hôtels les plus populaires, leur images, leur noms ainsi que leur notes*/
@@ -422,7 +421,7 @@ footer { /*Pied de page contenant les rubriques à propos, hébergements et assi
     flex: 1;
 }
 
-@media all and (max-width: 740px) {
+@media all and (max-width: 800px) {
     header {
         margin-bottom: 1rem;
     }
@@ -430,6 +429,10 @@ footer { /*Pied de page contenant les rubriques à propos, hébergements et assi
     #logo {
        align-items: flex-start;
        margin-top: 1.5rem;
+    }
+
+    #logo img {
+        width: 4rem;
     }
 
     #menu {
@@ -446,6 +449,7 @@ footer { /*Pied de page contenant les rubriques à propos, hébergements et assi
     #menu a:hover {
         border-bottom: 2px solid #0065fc !important;
         border-top: none;
+        color: #0065fc;
     }
 
     .suscribe {
