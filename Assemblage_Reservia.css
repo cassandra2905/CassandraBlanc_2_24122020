@@ -119,6 +119,7 @@ header { /*En-tête*/
     display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
     justify-content: center; /*la zone du texte "Rechercher" est centrée dans l'axe principal*/
     align-items: center; /*la zone du texte "Rechercher" est centrée dans l'axe secondaire (interligne)*/
+    height: 3rem;
 }
 .filter-container { /*bloc "parent" ou sont contenus les filtres*/
     display: flex; /*définit un conteneur les blocs sont côte à côte horizontalement par défaut*/
@@ -477,6 +478,21 @@ footer { /*Pied de page contenant les rubriques à propos, hébergements et assi
         display: block;
         border-radius: 1rem;
         width: 3rem;
+    }
+
+    .container-search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #map {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    #site-search {
+        height: 3rem;
     }
 
     #search-text {
