@@ -99,7 +99,6 @@ header { /*En-tête*/
 
 #site-search { /*input de type zone de recherche*/
     width: 15rem;
-    max-width: 50vw;
     border: solid 1px #f2f2f2; /*la zone de recherche à une bordure continue de 1px et de couleur gris clair selon la notation hexadécimale*/
     font-size: 1rem; /*la police d'écriture est de 1rem (1caractère)*/
     font-family: "Raleway"; /*la police d''écriture est une google font nommée Raleway*/
@@ -289,6 +288,12 @@ header { /*En-tête*/
     align-items: center; /*alignement sur l'axe secondaire au centre*/
     justify-content: center;
     align-items: stretch; 
+}
+
+.most-popular-list > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .most-popular-hotel { /*bloc englobant toutes les informations relatives aux hotels les plus populaires*/
@@ -506,6 +511,7 @@ footer { /*Pied de page contenant les rubriques à propos, hébergements et assi
  
     .main-contain {
         flex-direction: column-reverse;
+        margin-bottom: 2rem;
     }
 
     .main-contain + h3 {
@@ -559,7 +565,11 @@ footer { /*Pied de page contenant les rubriques à propos, hébergements et assi
     }
 
     #activities-in-marseille-container {
-        flex-direction: column;
+        flex-direction: column; 
+    }
+
+    .column-activities {
+        display: block;
     }
 
     .space-footer {
